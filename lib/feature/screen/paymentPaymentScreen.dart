@@ -31,7 +31,7 @@ class _BlinkitPaymentScreenState extends State<BlinkitPaymentScreen>
   // wallet position: centre → upper area
   late Animation<Alignment> _walletAlign;
   // wallet scale: 1.0 → 0.82 (slightly smaller when at top)
-  late Animation<double> _walletShrink;
+
 
   // branding fade + slide
   late Animation<double>   _brandFade;
@@ -65,10 +65,6 @@ class _BlinkitPaymentScreenState extends State<BlinkitPaymentScreen>
       curve: const Interval(0.0, 1.0, curve: Curves.easeInOut),
     ));
 
-    _walletShrink = Tween<double>(begin: 1.0, end: 0.78).animate(
-      CurvedAnimation(parent: _transCtrl,
-          curve: const Interval(0.0, 0.75, curve: Curves.easeInOut)),
-    );
 
     // ── branding text ─────────────────────────────────────
     _brandFade = Tween<double>(begin: 0.0, end: 1.0).animate(
@@ -154,9 +150,6 @@ class _BlinkitPaymentScreenState extends State<BlinkitPaymentScreen>
             AnimatedBuilder(
               animation: _walletCtrl,
               builder: (_, __) {
-                final scale = CurvedAnimation(
-                    parent: _walletCtrl, curve: Curves.elasticOut)
-                    .value;
                 final rot = Tween<double>(begin: -0.12, end: 0.0)
                     .animate(CurvedAnimation(
                     parent: _walletCtrl, curve: Curves.easeOut))
@@ -165,11 +158,7 @@ class _BlinkitPaymentScreenState extends State<BlinkitPaymentScreen>
                   alignment: Alignment.center,
                   child: Transform.rotate(
                     angle: rot,
-                    child: Transform.scale(
-                      scale: scale,
-
-                      child: BlinkitLogo(),
-                    ),
+                    child: BlinkitLogo(),
                   ),
                 );
               },
@@ -181,7 +170,6 @@ class _BlinkitPaymentScreenState extends State<BlinkitPaymentScreen>
               animation: _transCtrl,
               builder: (_, __) => SuccessContent(
                 walletAlign:  _walletAlign.value,
-                walletScale:  _walletShrink.value,
                 brandFade:    _brandFade.value,
                 brandSlide:   _brandSlide.value,
                 cardFades:    _cardFade.map((a) => a.value).toList(),

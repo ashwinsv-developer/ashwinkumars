@@ -10,7 +10,6 @@ import 'logo.dart';
 
 class SuccessContent extends StatelessWidget {
   final Alignment walletAlign;
-  final double    walletScale;
   final double    brandFade;
   final Offset    brandSlide;
   final List<double> cardFades;
@@ -20,7 +19,7 @@ class SuccessContent extends StatelessWidget {
 
   const SuccessContent({
     required this.walletAlign,
-    required this.walletScale,
+
     required this.brandFade,
     required this.brandSlide,
     required this.cardFades,
@@ -39,15 +38,12 @@ class SuccessContent extends StatelessWidget {
             SizedBox(height: 60,),
             Align(
               alignment: walletAlign,
-              child: Transform.scale(
-                scale: walletScale,
-                child: BlinkitLogo(),
-              ),
+              child: BlinkitLogo(),
             ),
       
             // ── scrollable content column ───────────────
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
               child: Column(
                 children: [
                   // space for wallet at top
@@ -144,3 +140,4 @@ class SuccessContent extends StatelessWidget {
     );
   }
 }
+

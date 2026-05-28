@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/Constants.dart';
 
 class GiftCardRow extends StatelessWidget {
   const GiftCardRow({super.key});
@@ -7,9 +8,9 @@ class GiftCardRow extends StatelessWidget {
   Widget build(BuildContext context) => Container(
     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
     decoration: BoxDecoration(
-      color: const Color(0xFF252520),
+      color: AppColors.cardBg,
       borderRadius: BorderRadius.circular(16),
-      border: Border.all(color: const Color(0xFF333328)),
+      border: Border.all(color: AppColors.cardBorder),
     ),
     child: Row(children: [
       Container(
@@ -17,7 +18,7 @@ class GiftCardRow extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           gradient: const LinearGradient(
-              colors: [Color(0xFFFFCC00), Color(0xFFBF7400)],
+              colors: [AppColors.accentYellow, AppColors.accentYellowDark],
               begin: Alignment.topLeft, end: Alignment.bottomRight),
         ),
         child: const Icon(Icons.card_giftcard, color: Colors.white, size: 26),

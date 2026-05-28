@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../core/Constants.dart';
 
 import 'BrandWidget.dart';
 import 'cards/feature_card.dart';
@@ -102,7 +103,7 @@ class SuccessContent extends StatelessWidget {
                             child: ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF3BAD3B),
+                                backgroundColor: AppColors.primaryGreen,
                                 foregroundColor: Colors.white,
                                 padding: const EdgeInsets.symmetric(vertical: 18),
                                 shape: RoundedRectangleBorder(
@@ -121,7 +122,7 @@ class SuccessContent extends StatelessWidget {
                             'Enjoy seamless\none tap payments',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: const Color(0xFF4A4530).withOpacity(0.85),
+                              color: AppColors.footerText.withOpacity(0.85),
                               fontSize: 24,
                               fontWeight: FontWeight.w800,
                               height: 1.2,

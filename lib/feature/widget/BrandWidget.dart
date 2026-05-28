@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../../core/Constants.dart';
 
 class Branding extends StatelessWidget {
   const Branding();
@@ -30,7 +31,7 @@ class CircleBtn extends StatelessWidget {
     child: Container(
       width: 44, height: 44,
       decoration: BoxDecoration(
-          color: const Color(0xFF2C2C2C),
+          color: AppColors.darkGrey,
           borderRadius: BorderRadius.circular(22)),
       child: Icon(icon, color: Colors.white, size: 22),
     ),

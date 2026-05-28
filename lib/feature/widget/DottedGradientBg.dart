@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import '../../core/Constants.dart';
 
 class DottedGradientBg extends StatelessWidget {
   const DottedGradientBg();
@@ -9,7 +10,11 @@ class DottedGradientBg extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF2A2210), Color(0xFF181814), Color(0xFF0F0F0F)],
+          colors: [
+            AppColors.backgroundTop,
+            AppColors.backgroundMiddle,
+            AppColors.backgroundBottom,
+          ],
           stops: [0.0, 0.3, 1.0],
         ),
       ),
@@ -29,7 +34,7 @@ class DotsBgPainter extends CustomPainter {
         canvas.drawCircle(
           Offset(x, y),
           1.5,
-          Paint()..color = const Color(0xFF8A7030).withOpacity(opacity),
+          Paint()..color = AppColors.dotColor.withOpacity(opacity),
         );
       }
     }

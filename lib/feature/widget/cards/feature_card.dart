@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../core/Constants.dart';
 
 class FeatureData {
   final IconData icon;
@@ -15,18 +16,18 @@ class FeatureCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
       decoration: BoxDecoration(
-        color: const Color(0xFF252520),
+        color: AppColors.cardBg,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF333328)),
+        border: Border.all(color: AppColors.cardBorder),
       ),
       child: Row(
         children: [
           Container(
             width: 64, height: 64,
             decoration: BoxDecoration(
-              color: const Color(0xFF1C1C1C),
+              color: AppColors.iconBg,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF3A3A30)),
+              border: Border.all(color: AppColors.iconBorder),
             ),
             child: Stack(alignment: Alignment.center, children: [
               Icon(Icons.smartphone_outlined,
@@ -36,7 +37,7 @@ class FeatureCard extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(2),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFCC00),
+                    color: AppColors.accentYellow,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Icon(data.icon, color: Colors.black, size: 13),

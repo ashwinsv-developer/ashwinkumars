@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import '../../core/Constants.dart';
 
 class ConfettiPainter extends CustomPainter {
   final double progress;
@@ -7,11 +8,11 @@ class ConfettiPainter extends CustomPainter {
   ConfettiPainter(this.progress);
 
   final List<Color> colors = const [
-    Colors.blue,
-    Colors.yellow,
-    Colors.green,
-    Colors.pink,
-    Colors.red,
+    AppColors.confettiBlue,
+    AppColors.confettiYellow,
+    AppColors.confettiGreen,
+    AppColors.confettiPink,
+    AppColors.confettiRed,
   ];
 
   @override

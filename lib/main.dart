@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/app_constants.dart';
 import 'feature/screen/paymentPaymentScreen.dart';
 import 'feature/widget/BrandWidget.dart';
 import 'feature/widget/DottedGradientBg.dart';
@@ -17,7 +18,7 @@ class BlinkitMoneyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Blinkit Money',
+      title: AppStrings.appTitle,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
       home: const BlinkitPaymentScreen(),

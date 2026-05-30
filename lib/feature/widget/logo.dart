@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../core/app_constants.dart';
 
 class BlinkitLogo extends StatelessWidget {
   final double size;
@@ -8,7 +9,7 @@ class BlinkitLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      'assets/wallet.svg',
+      AppStrings.walletSvg,
       width: size,
       height: size,
       fit: BoxFit.contain,

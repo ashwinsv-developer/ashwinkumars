@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../core/Constants.dart';
+import '../../../core/app_colour.dart';
+import '../../../core/app_constants.dart';
 
 class GiftCardRow extends StatelessWidget {
   const GiftCardRow({super.key});
@@ -27,11 +28,11 @@ class GiftCardRow extends StatelessWidget {
       Expanded(child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Claim Gift Card',
+          const Text(AppStrings.claimGiftCard,
               style: TextStyle(color: Colors.white, fontSize: 14,
                   fontWeight: FontWeight.w700)),
           const SizedBox(height: 2),
-          Text('Enter gift card details to claim your gift card',
+          Text(AppStrings.claimGiftCardSubtitle,
               style: TextStyle(color: Colors.white.withOpacity(0.5),
                   fontSize: 12)),
         ],

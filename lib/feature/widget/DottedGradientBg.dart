@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import '../../core/Constants.dart';
+import '../../core/app_colour.dart';
 
 class DottedGradientBg extends StatelessWidget {
   const DottedGradientBg();

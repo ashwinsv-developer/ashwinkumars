@@ -2,18 +2,19 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../core/Constants.dart';
+import '../../core/app_colour.dart';
+import '../../core/app_constants.dart';
 
 class Branding extends StatelessWidget {
   const Branding();
   @override
   Widget build(BuildContext context) => Column(
     children: [
-      Text('blinkit',
+      Text(AppStrings.brandName,
           style: TextStyle(
               color: Colors.white.withOpacity(0.88),
               fontSize: 21, fontWeight: FontWeight.w500, letterSpacing: .5)),
-      const Text('MONEY',
+      const Text(AppStrings.brandSubtitle,
           style: TextStyle(
               color: Colors.white, fontSize: 50,
               fontWeight: FontWeight.w900, letterSpacing: 3, height: 1.0)),

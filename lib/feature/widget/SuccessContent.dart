@@ -2,7 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../core/Constants.dart';
+import '../../core/app_colour.dart';
+import '../../core/app_constants.dart';
 
 import 'BrandWidget.dart';
 import 'cards/feature_card.dart';
@@ -64,18 +65,18 @@ class SuccessContent extends StatelessWidget {
                     final features = [
                       const FeatureData(
                         icon: Icons.touch_app_outlined,
-                        title: 'Single tap payments',
-                        subtitle: 'Enjoy seamless payments without the wait for OTPs',
+                        title: AppStrings.feature1Title,
+                        subtitle: AppStrings.feature1Subtitle,
                       ),
                       const FeatureData(
                         icon: Icons.wifi_outlined,
-                        title: 'Zero failures',
-                        subtitle: 'Zero payment failures ensure you never miss an order',
+                        title: AppStrings.feature2Title,
+                        subtitle: AppStrings.feature2Subtitle,
                       ),
                       const FeatureData(
                         icon: Icons.replay_outlined,
-                        title: 'Real-time refunds',
-                        subtitle: 'No need to wait for refunds. Blinkit Money refunds are instant!',
+                        title: AppStrings.feature3Title,
+                        subtitle: AppStrings.feature3Subtitle,
                       ),
                     ];
                     return Padding(
@@ -110,7 +111,7 @@ class SuccessContent extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(12)),
                                 elevation: 0,
                               ),
-                              child: const Text('Add Money',
+                              child: const Text(AppStrings.addMoney,
                                   style: TextStyle(
                                       fontSize: 17, fontWeight: FontWeight.w700)),
                             ),
@@ -119,7 +120,7 @@ class SuccessContent extends StatelessWidget {
                           const GiftCardRow(),
                           const SizedBox(height: 20),
                           Text(
-                            'Enjoy seamless\none tap payments',
+                            AppStrings.footerMessage,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: AppColors.footerText.withOpacity(0.85),
